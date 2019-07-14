@@ -25,10 +25,10 @@
       <javac 
          srcdir="src" destdir="bin"  
          source="1.4" target="1.4"
-         classpath="libs/bcel-5.2.jar;libs/gsc.jar;libs/antlr.jar"
+         classpath="libs/bcel-6.3.1.jar;libs/gsc.jar;libs/antlr.jar"
       />      
 
-      <unjar src="libs/bcel-5.2.jar" dest="temp"/>
+      <unjar src="libs/bcel-6.3.1.jar" dest="temp"/>
       <unjar src="libs/gsc.jar" dest="temp"/>
       <unjar src="libs/antlr.jar" dest="temp"/>
       
