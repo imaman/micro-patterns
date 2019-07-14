@@ -1,4 +1,5 @@
 #! /bin/sh
 BASE_DIR=`dirname $0`
-java -cp $BASE_DIR/mp.jar il.ac.technion.micropatterns.stats.MicroPatternsDetector $*
+mvn exec:java -Dexec.args="$*"
+
 
