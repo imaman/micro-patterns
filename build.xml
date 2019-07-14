@@ -1,0 +1,55 @@
+<project name="micro-patterns" default="build">
+   <description>Micro-patterns detector program</description>
+
+   <target name="init">
+      <!-- Create the time stamp -->
+      <tstamp/>
+      <!-- Create the build directory structure used by compile -->
+      <mkdir dir="bin"/>
+   </target>
+
+
+    <!-- Compile the java code from src/ into bin/ -->
+   <target name="build" depends="init"
+        description="compile">
+
+      <delete dir="temp"/>
+      <mkdir dir="temp"/>
+            
+      <copy todir="bin">
+         <fileset dir="src">
+            <exclude name="**/*.java"/>
+         </fileset>
+      </copy>
+            
+      <javac 
+         srcdir="src" destdir="bin"  
+         source="1.4" target="1.4"
+         classpath="libs/bcel-5.2.jar;libs/gsc.jar;libs/antlr.jar"
+      />      
+
+      <unjar src="libs/bcel-5.2.jar" dest="temp"/>
+      <unjar src="libs/gsc.jar" dest="temp"/>
+      <unjar src="libs/antlr.jar" dest="temp"/>
+      
+      <copy todir="temp">
+         <fileset dir="bin"/>
+      </copy>
+
+      <jar jarfile="mp.jar" basedir="temp">  
+         <manifest>
+            <attribute name="Created-at" value="${DSTAMP}"/>
+         </manifest>
+      </jar>
+      
+      <delete dir="temp"/>
+   </target>
+
+
+   <target name="clean" description="clean up" >
+      <delete dir="bin"/>
+      <delete dir="temp"/>
+      <delete file="mp.jar"/>
+   </target>
+   
+</project>

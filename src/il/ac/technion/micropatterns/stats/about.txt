@@ -1,0 +1,11 @@
+
+Copyright (c) 2004-2005 Yossi Gil, Itay Maman
+Department of Computer Science
+Technion - Israel Institute of Technology.
+All rights reserved.
+
+This product includes software developed by the BCEL project 
+(http://bcel.sourceforge.net)
+
+This product uses JAD - the fast JAva Decompiler 
+(http://www.kpdus.com/jad.html)
