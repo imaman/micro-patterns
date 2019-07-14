@@ -89,7 +89,7 @@ import org.apache.bcel.classfile.JavaClass;
 import org.apache.bcel.classfile.Method;
 import org.apache.bcel.classfile.Synthetic;
 import org.apache.bcel.generic.Instruction;
-import org.kohsuke.gsc.sample.java.JavaColorizer;
+//import org.kohsuke.gsc.sample.java.JavaColorizer;
 
 
 
@@ -771,25 +771,7 @@ public class DecompilerImpl
          + text_to_html(sw.toString())
          + "</font></html>";
       
-      try
-      {
-         Reader reader = run_jad(jc);
-         
-         StringWriter listing = new StringWriter();
-         PrintWriter lstw = new PrintWriter(listing);
-         
-                           
-         JavaColorizer jcol = new JavaColorizer(""); 
-         jcol.colorize(reader, lstw);
-                  
-         result.java = process_colors(listing.toString());
-         
-         JimaMisc.log().println("s=" + result);
-      }
-      catch(DecompilationFaiulure e)
-      {  
-         result.java = result.bytecode;
-      }
+      result.java = result.bytecode;
 
       editor.setContentType("text/html");
       editor.setText(result.java);
