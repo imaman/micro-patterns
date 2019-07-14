@@ -10,6 +10,9 @@ Your local machine needs to have the following installed:
 - [Maven](https://maven.apache.org/install.html)
 
 
+(yes, the former is implied by the latter...)
+
+
 ## Usage
 Run the mp.sh script to invoke the micro-patterns detector on a JAR of your choice. Example:
 
