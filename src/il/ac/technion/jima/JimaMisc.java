@@ -122,8 +122,8 @@ public class JimaMisc
       System.err.println(text);
       log().println(text);
       
-      JOptionPane.showMessageDialog(null, text, 
-         "Assertion failed", JOptionPane.ERROR_MESSAGE);
+//      JOptionPane.showMessageDialog(null, text,
+//         "Assertion failed", JOptionPane.ERROR_MESSAGE);
                  
       System.exit(-1);                                        
 	}

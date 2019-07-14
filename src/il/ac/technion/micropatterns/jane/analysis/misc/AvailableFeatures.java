@@ -130,8 +130,8 @@ public class AvailableFeatures
       for(int i = 0; i < effective_.get_interface_methods().size(); ++i)
       {
          Method curr = effective_.get_interface_methods().at(i);
-         JimaMisc.ensure(curr.isAbstract());
-         JimaMisc.ensure(!curr.isPrivate());
+//         JimaMisc.ensure(curr.isAbstract());
+//         JimaMisc.ensure(!curr.isPrivate());
          
          MethodSelector ms = new MethodSelector(curr);
          if(conc.contains(ms))

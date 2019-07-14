@@ -80,7 +80,7 @@ public class Features
                this.methods_.add(m);
             else
             {
-               JimaMisc.ensure(m.isAbstract());
+//               JimaMisc.ensure(m.isAbstract());
                this.interface_methods_.add(m);
             }
          }
