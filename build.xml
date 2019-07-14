@@ -17,13 +17,13 @@
       <mkdir dir="temp"/>
             
       <copy todir="bin">
-         <fileset dir="src">
+         <fileset dir="src/main/java">
             <exclude name="**/*.java"/>
          </fileset>
       </copy>
             
       <javac 
-         srcdir="src" destdir="bin"  
+         srcdir="src/main/java" destdir="bin"  
          source="1.4" target="1.4"
          classpath="libs/bcel-6.3.1.jar;libs/gsc.jar;libs/antlr.jar"
       />      
