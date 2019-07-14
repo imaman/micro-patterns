@@ -14,7 +14,7 @@ Your local machine needs to have the following installed:
 
 
 ## Usage
-Run the mp.sh script to invoke the micro-patterns detector on a JAR of your choice. Example:
+Run the [mp.sh](mp.sh) script to invoke the micro-patterns detector on a JAR of your choice. Example:
 
 
 ```
