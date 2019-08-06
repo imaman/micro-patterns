@@ -1,5 +1,5 @@
-#! /bin/sh
+#! /bin/bash
 BASE_DIR=`dirname $0`
-mvn exec:java -Dexec.args="$*"
+mvn compile && mvn exec:java -Dexec.args="$*"
 
 
